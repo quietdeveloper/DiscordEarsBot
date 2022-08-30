@@ -343,13 +343,20 @@ function speak_impl(voice_Connection, mapKey) {
 }
 
 function process_commands_query(txt, mapKey, user) {
-    if (txt && txt.length) {
-        let val = guildMap.get(mapKey);
-        //val.text_Channel.send(user.username + ': ' + txt)
-    }
     if (txt == "alexa hello") {
         let val = guildMap.get(mapKey);
         val.text_Channel.send("hi")
+    }
+    else if (txt == "alexa leave") {
+                let val = guildMap.get(mapKey);
+                if (val.voice_Channel) val.voice_Channel.leave()
+                if (val.voice_Connection) val.voice_Connection.disconnect()
+                guildMap.delete(mapKey)
+                msg.reply("Disconnected.")
+    }
+    else (txt && txt.length) {
+        let val = guildMap.get(mapKey);
+        val.text_Channel.send(user.username + ' : you say (' + txt + ')')
     }
 }
 
