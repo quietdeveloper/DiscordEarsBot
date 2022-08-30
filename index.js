@@ -167,7 +167,7 @@ discordClient.on('ready', () => {
 
 discordClient.login(process.env.DISCORD_TOK)
 
-const PREFIX = 'alexa';
+const PREFIX = 'alexa ';
 const _CMD_HELP        = PREFIX + 'help';
 const _CMD_JOIN        = PREFIX + 'join';
 const _CMD_LEAVE       = PREFIX + 'leave';
