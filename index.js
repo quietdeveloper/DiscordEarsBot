@@ -159,8 +159,8 @@ if (process.env.DEBUG)
     discordClient.on('debug', console.debug);
 discordClient.on('ready', () => {
     console.log(`Logged in as ${discordClient.user.tag}!`)
-    //discordClient.user.setActivity("alexa help");
-    //discordClient.user.setStatus('online'); 
+    discordClient.user.setActivity("alexa help");
+    discordClient.user.setStatus('online'); 
 })
 
 
@@ -283,7 +283,7 @@ async function connect(msg, mapKey) {
             if (e) console.log(e);
             guildMap.delete(mapKey);
         })
-       // msg.reply('connected!')
+        msg.reply('connected!')
     } catch (e) {
         console.log('connect: ' + e)
         msg.reply('Error: unable to join your voice channel.');
