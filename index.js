@@ -165,7 +165,7 @@ discordClient.on('ready', () => {
 
 
 
-discordClient.login(DISCORD_TOK)
+discordClient.login(process.env.DISCORD_TOK)
 
 const PREFIX = 'alexa';
 const _CMD_HELP        = PREFIX + 'help';
