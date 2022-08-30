@@ -159,8 +159,8 @@ if (process.env.DEBUG)
     discordClient.on('debug', console.debug);
 discordClient.on('ready', () => {
     console.log(`Logged in as ${discordClient.user.tag}!`)
-    discordClient.user.setActivity("alexa help");
-    discordClient.user.setStatus('online'); 
+    //discordClient.user.setActivity("alexa help");
+    //discordClient.user.setStatus('online'); 
 })
 
 
