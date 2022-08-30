@@ -161,8 +161,8 @@ discordClient.on('ready', () => {
     console.log(`Logged in as ${discordClient.user.tag}!`)
 })
 
-client.user.setPresence({ game: { name: 'Alexa' }, status: 'online' });
-bot.user.setGame('Alexa', 'alexa help');
+discordClient.user.setPresence({ game: { name: 'Alexa' }, status: 'online' });
+discordClient.user.setGame('Alexa', 'alexa help');
 
 
 discordClient.login(DISCORD_TOK)
