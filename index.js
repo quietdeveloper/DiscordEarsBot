@@ -359,10 +359,6 @@ function process_commands_query(txt, mapKey, user) {
                 guildMap.delete(mapKey)
                 msg.reply("Disconnected.")
     }
-    else (txt && txt.length) {
-        let val = guildMap.get(mapKey);
-        val.text_Channel.send(user.username + ' : you say (' + txt + ')')
-    }
 }
 
 
