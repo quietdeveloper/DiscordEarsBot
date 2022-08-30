@@ -278,7 +278,7 @@ async function connect(msg, mapKey) {
             if (e) console.log(e);
             guildMap.delete(mapKey);
         })
-        msg.reply('connected!')
+       // msg.reply('connected!')
     } catch (e) {
         console.log('connect: ' + e)
         msg.reply('Error: unable to join your voice channel.');
@@ -306,7 +306,7 @@ function speak_impl(voice_Connection, mapKey) {
         if (speaking.bitfield == 0 || user.bot) {
             return
         }
-        console.log(`I'm listening to ${user.username}`)
+       // console.log(`I'm listening to ${user.username}`)
         // this creates a 16-bit signed PCM, stereo 48KHz stream
         const audioStream = voice_Connection.receiver.createStream(user, { mode: 'pcm' })
         audioStream.on('error',  (e) => { 
@@ -345,7 +345,7 @@ function speak_impl(voice_Connection, mapKey) {
 function process_commands_query(txt, mapKey, user) {
     if (txt && txt.length) {
         let val = guildMap.get(mapKey);
-        val.text_Channel.send(user.username + ': ' + txt + ' quiet ftx')
+       // val.text_Channel.send(user.username + ': ' + txt + ' quiet ftx')
     }
 }
 
