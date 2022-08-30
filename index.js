@@ -159,10 +159,10 @@ if (process.env.DEBUG)
     discordClient.on('debug', console.debug);
 discordClient.on('ready', () => {
     console.log(`Logged in as ${discordClient.user.tag}!`)
+    discordClient.user.setActivity("alexa help");
+    discordClient.user.setStatus('online'); 
 })
 
-discordClient.user.setPresence({ game: { name: 'Alexa' }, status: 'online' });
-discordClient.user.setGame('Alexa', 'alexa help');
 
 
 discordClient.login(DISCORD_TOK)
