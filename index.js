@@ -160,6 +160,11 @@ if (process.env.DEBUG)
 discordClient.on('ready', () => {
     console.log(`Logged in as ${discordClient.user.tag}!`)
 })
+
+client.user.setPresence({ game: { name: 'Alexa' }, status: 'online' });
+bot.user.setGame('Alexa', 'alexa help');
+
+
 discordClient.login(DISCORD_TOK)
 
 const PREFIX = 'alexa';
