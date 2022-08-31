@@ -213,7 +213,7 @@ __**admin**__
 ${PREFIX}ban - to ban member
 `)
             //msg.reply(embed);
-    msg.channel.send(embed)
+    msg.text_Channel.send(embed)
         }
         else if (msg.content.trim().toLowerCase() == _CMD_DEBUG) {
             console.log('toggling debug mode')
