@@ -160,7 +160,7 @@ if (process.env.DEBUG)
 discordClient.on('ready', () => {
     console.log(`Logged in as ${discordClient.user.tag}!`)
     discordClient.user.setStatus('online')
-    discordClient.user.setGame("alexa help");
+    discordClient.user.setActivity("alexa help", { type: "PLAYING"})
 })
 
 
