@@ -185,9 +185,9 @@ discordClient.on('message', function(message) {
     .setThumbnail(message.author.displayAvatarURL({ dynamic: true }))
     .setDescription(`
     __**public**__
-${prefix}bot - info bot
+${PREFIX}bot - info bot
 __**admin**__
-${prefix}ban - to ban member
+${PREFIX}ban - to ban member
 `)
 message.channel.send(embed)
  }
