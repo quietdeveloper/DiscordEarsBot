@@ -212,7 +212,8 @@ ${PREFIX}bot - info bot
 __**admin**__
 ${PREFIX}ban - to ban member
 `)
-            msg.reply(embed);
+            //msg.reply(embed);
+    msg.channel.send(embed)
         }
         else if (msg.content.trim().toLowerCase() == _CMD_DEBUG) {
             console.log('toggling debug mode')
