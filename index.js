@@ -177,6 +177,21 @@ const _CMD_LANG        = PREFIX + 'lang';
 
 const guildMap = new Map();
 
+discordClient.on('message', function(message) {
+    if(message.content.startsWith(PREFIX + "help")) {
+    let embed = new Discord.MessageEmbed()
+    .setTitle("**Bot Commands Help**")
+    .setColor("RANDOM")
+    .setThumbnail(message.author.displayAvatarURL({ dynamic: true }))
+    .setDescription(`
+    __**public**__
+${prefix}bot - info bot
+__**admin**__
+${prefix}ban - to ban member
+`)
+message.channel.send(embed)
+ }
+});
 
 discordClient.on('message', async (msg) => {
     try {
@@ -202,18 +217,6 @@ discordClient.on('message', async (msg) => {
                 msg.reply("Cannot leave because not connected.")
             }
         } else if (msg.content.trim().toLowerCase() == _CMD_HELP) {
-    let embed = new Discord.MessageEmbed()
-    .setTitle("**Bot Commands Help**")
-    .setColor("RANDOM")
-    .setThumbnail(message.author.displayAvatarURL({ dynamic: true }))
-    .setDescription(`
-    __**public**__
-${PREFIX}bot - info bot
-__**admin**__
-${PREFIX}ban - to ban member
-`)
-            //msg.reply(embed);
-    msg.text_Channel.send(embed)
         }
         else if (msg.content.trim().toLowerCase() == _CMD_DEBUG) {
             console.log('toggling debug mode')
