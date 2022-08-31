@@ -167,6 +167,14 @@ discordClient.on('ready', () => {
             url: "alexa help"
         }
     });
+discordClient.user.setPresence({
+    status: 'online',
+    activity: {
+        name: 'Alexa',
+        type: 'STREAMING',
+        url: 'https://www.twitch.tv/monstercat'
+    }
+})
 })
 
 
