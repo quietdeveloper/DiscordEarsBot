@@ -159,22 +159,8 @@ if (process.env.DEBUG)
     discordClient.on('debug', console.debug);
 discordClient.on('ready', () => {
     console.log(`Logged in as ${discordClient.user.tag}!`)
-    discordClient.user.setStatus('available')
-    discordClient.user.setPresence({
-        game: {
-            name: 'Alexa',
-            type: "STREAMING",
-            url: "alexa help"
-        }
-    });
-discordClient.user.setPresence({
-    status: 'online',
-    activity: {
-        name: 'Alexa',
-        type: 'STREAMING',
-        url: 'https://www.twitch.tv/monstercat'
-    }
-})
+    discordClient.user.setStatus('online')
+    discordClient.user.setGame("alexa help");
 })
 
 
